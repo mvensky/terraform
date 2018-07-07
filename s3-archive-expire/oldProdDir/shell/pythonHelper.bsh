@@ -1,0 +1,2 @@
+#!/bin/bash
+aws s3api list-objects --bucket $1 --query 'Contents[].{Key: Key}' | grep 'Key' | sed 's/"Key": "//' | grep '.*/.*/' |awk -F '/' '{print  $1,  $2 }' | sort | uniq

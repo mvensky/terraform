@@ -1,0 +1,4 @@
+#!/bin/bash
+awsLifecycleManager-terraform-v2.py mvenskybucketoregon Y 30 Y 365
+awsLifecycleManager-terraform-v2.py mvensky-second Y 15 Y 90
+

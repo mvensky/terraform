@@ -1,0 +1,26 @@
+
+{
+
+    "resource" : {
+        "aws_s3_bucket" : {
+            "mvensky-second" : {
+                "bucket" : "mvensky-second",
+    
+                "lifecycle_rule" : {
+                    "id" : "mvensky-secondRule1",
+                     "enabled" : true,
+                    "prefix" : "root-folder/one-level-down/",
+                    "transition" : {
+                        "days" : 15,
+                        "storage_class" : "GLACIER"
+                    },
+                    "expiration" : {
+                        "days" : 90
+                    }
+                },
+        
+            }
+        }
+    }
+}
+    

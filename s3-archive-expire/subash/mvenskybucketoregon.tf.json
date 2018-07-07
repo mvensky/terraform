@@ -1,0 +1,39 @@
+
+{
+
+    "resource" : {
+        "aws_s3_bucket" : {
+            "mvenskybucketoregon" : {
+                "bucket" : "mvenskybucketoregon",
+    
+                "lifecycle_rule" : {
+                    "id" : "mvenskybucketoregonRule1",
+                     "enabled" : true,
+                    "prefix" : "layer-one/layer-two/",
+                    "transition" : {
+                        "days" : 17,
+                        "storage_class" : "GLACIER"
+                    },
+                    "expiration" : {
+                        "days" : 90
+                    }
+                },
+        
+                "lifecycle_rule" : {
+                    "id" : "mvenskybucketoregonRule2",
+                     "enabled" : true,
+                    "prefix" : "level-1/level-2/",
+                    "transition" : {
+                        "days" : 17,
+                        "storage_class" : "GLACIER"
+                    },
+                    "expiration" : {
+                        "days" : 90
+                    }
+                },
+        
+            }
+        }
+    }
+}
+    

@@ -1,0 +1,22 @@
+{
+
+    "resource" : {
+        "aws_s3_bucket" : {
+            "b" : {
+                "bucket" : "newterraformbucket",
+                "lifecycle_rule" : {
+                    "id" : "RuleName",
+                     "enabled" : true,
+                    "prefix" : "level-one/level-two/",
+                    "transition" : {
+                        "days" : 30,
+                        "storage_class" : "GLACIER"
+                    },
+                    "expiration" : {
+                        "days" : 365
+                    }
+                }
+            }
+        }
+    }
+}

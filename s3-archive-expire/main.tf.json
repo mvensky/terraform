@@ -1,0 +1,26 @@
+{
+    "provider" : {
+        "aws" : {
+            "region" : "us-west-2"
+        }
+    }
+}
+
+{
+    "resource" : {
+        "aws_s3_bucket" : {
+            "bucket" : {
+                 "bucket" : "mvenskybucketoregon",
+                  "lifecycle_rule" : {
+                      "id"    : "test-rule",
+                      "prefix" : "layer-one/layer-two",
+                      "enabled" : "true",
+                      "transition" : {
+                          "days" : 30,
+                          "storage_class" : "GLACIER"
+                      } 
+                  }
+            }
+        }
+    }
+}
